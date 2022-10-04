@@ -139,6 +139,25 @@
     overflow-y: scroll;
 }
 
+.trending-list .trending-header{
+    background-color: var(--background-light);
+
+    margin: 10px;
+    padding: 20px;
+
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.trending-list .trending-header h6{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
 .material {
     background-color: var(--background-light);
 
