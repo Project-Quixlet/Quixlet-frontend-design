@@ -1,0 +1,233 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+
+    font-family: 'regular';
+}
+
+:root {
+    --background-main: rgb(26, 31, 37);
+    --background-light: rgb(54, 69, 87);
+
+}
+
+@font-face {
+    font-family: 'regular';
+    src: url(/assets/fonts/RobotoMono-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'light';
+    src: url(/assets/fonts/RobotoMono-Light.ttf);
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: var(--background-main);
+}
+
+.navbar {
+    background-color: var(--background-light);
+
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo {
+    position: absolute;
+    left: 25px;
+    display: flex;
+}
+
+.logo-text {
+    color: white;
+}
+
+.logo .logo-img {
+    margin-right: 25px;
+
+    height: 40px;
+    width: 40px;
+    background-color: brown;
+}
+
+.actions {
+    position: absolute;
+    right: 25px;
+    display: flex;
+    flex-direction: row;
+}
+
+.actions .create-button {
+    margin-right: 25px;
+
+    padding: 5px;
+    font-size: 20px;
+
+    background-color: var(--background-main);
+    color: white;
+
+    border-radius: 5px;
+}
+
+.actions form {
+    display: flex;
+    flex-direction: row;
+}
+
+.actions .search-input {
+    padding: 5px;
+    font-size: 20px;
+
+    background-color: var(--background-main);
+
+    color: white;
+
+    border-radius: 5px;
+}
+
+.search-input::placeholder {
+    font-style: italic;
+}
+
+.actions .search-submit {
+    width: 35px;
+    height: 35px;
+
+    margin-left: 5px;
+
+    background: none;
+
+    background-image: url(/assets/img/search.svg);
+    background-size: 30px 30px;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    filter: brightness(0);
+}
+
+.container .content {
+    position: absolute;
+    top: 50px;
+
+    height: calc(100% - 50px);
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.content .trending-list {
+    position: absolute;
+
+    height: 100%;
+    width: 450px;
+    overflow-y: scroll;
+}
+
+.material {
+    background-color: var(--background-light);
+
+    margin: 10px;
+    padding: 20px;
+
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.material:hover>h1 {
+    opacity: 75%;
+}
+
+.material h1 {
+    color: white;
+    font-size: 25px;
+
+    transition: opacity .2s ease-in-out;
+}
+
+.material h2 {
+    margin-top: 10px;
+    font-size: 15px;
+    color: white;
+    opacity: 65%;
+
+    margin-bottom: 50px;
+}
+
+.material .user {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.user .profile-pic {
+    width: 25px;
+    height: 25px;
+
+    margin-right: 10px;
+
+    background-color: brown;
+
+    border-radius: 5px;
+}
+
+.user h3 {
+    color: white;
+    font-size: 15px;
+}
+
+.material.trending h2 {
+    margin-bottom: 10px;
+}
+
+/*
+
+.trending .trending-materials {
+    background-color: aqua;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 5px;
+
+    overflow: scroll;
+}
+
+.content .content-right {
+    position: absolute;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 75%;
+    height: 100%;
+
+    background-color: red;
+
+}
+*/
