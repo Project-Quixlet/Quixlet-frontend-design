@@ -3,14 +3,12 @@
     margin: 0;
     outline: none;
     border: none;
-
     font-family: 'regular';
 }
 
 :root {
     --background-main: rgb(26, 31, 37);
     --background-light: rgb(54, 69, 87);
-
 }
 
 @font-face {
@@ -27,17 +25,14 @@
     position: absolute;
     width: 100%;
     height: 100%;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
     background-color: var(--background-main);
 }
 
 .navbar {
     background-color: var(--background-light);
-
     position: absolute;
     width: 100%;
     height: 50px;
@@ -58,7 +53,6 @@
 
 .logo .logo-img {
     margin-right: 25px;
-
     height: 40px;
     width: 40px;
     background-color: brown;
@@ -73,13 +67,10 @@
 
 .actions .create-button {
     margin-right: 25px;
-
     padding: 5px;
     font-size: 20px;
-
     background-color: var(--background-main);
     color: white;
-
     border-radius: 5px;
 }
 
@@ -91,11 +82,8 @@
 .actions .search-input {
     padding: 5px;
     font-size: 20px;
-
     background-color: var(--background-main);
-
     color: white;
-
     border-radius: 5px;
 }
 
@@ -106,53 +94,42 @@
 .actions .search-submit {
     width: 35px;
     height: 35px;
-
     margin-left: 5px;
-
     background: none;
-
     background-image: url(/assets/img/search.svg);
     background-size: 30px 30px;
     background-position: center center;
     background-repeat: no-repeat;
-
     filter: brightness(0);
 }
 
 .container .content {
     position: absolute;
     top: 50px;
-
     height: calc(100% - 50px);
     width: 100%;
-
     display: flex;
     flex-direction: row;
-
 }
 
 .content .trending-list {
     position: absolute;
-
     height: 100%;
     width: 450px;
     overflow-y: scroll;
 }
 
-.trending-list .trending-header{
+.trending-list .trending-header {
     background-color: var(--background-light);
-
     margin: 10px;
     padding: 20px;
-
     border-radius: 5px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.trending-list .trending-header h6{
+.trending-list .trending-header h6 {
     color: white;
     font-size: 30px;
     text-align: center;
@@ -160,12 +137,9 @@
 
 .material {
     background-color: var(--background-light);
-
     margin: 10px;
     padding: 20px;
-
     border-radius: 5px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -178,7 +152,6 @@
 .material h1 {
     color: white;
     font-size: 25px;
-
     transition: opacity .2s ease-in-out;
 }
 
@@ -187,13 +160,11 @@
     font-size: 15px;
     color: white;
     opacity: 65%;
-
     margin-bottom: 50px;
 }
 
 .material .user {
     width: 100%;
-
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -203,11 +174,8 @@
 .user .profile-pic {
     width: 25px;
     height: 25px;
-
     margin-right: 10px;
-
     background-color: brown;
-
     border-radius: 5px;
 }
 
@@ -220,3 +188,42 @@
     margin-bottom: 10px;
 }
 
+.content-right {
+    position: absolute;
+    left: 450px;
+    height: 100%;
+    width: calc(100% - 450px);
+}
+
+.starred-header {
+    background-color: var(--background-light);
+    width: calc(100% - 55px);
+    margin: 10px;
+    margin-bottom: 0px;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.starred-header h1 {
+    color: white;
+    text-align: center;
+}
+
+.starred-list {
+    position: absolute;
+    width: 100%;
+    height: calc(50% - 10px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+}
+
+.material.starred {
+    min-width: 350px;
+    max-width: 390px;
+    height: min-content;
+}
