@@ -193,6 +193,8 @@
     left: 450px;
     height: 100%;
     width: calc(100% - 450px);
+
+    overflow-y: scroll;
 }
 
 .starred-header {
@@ -213,13 +215,11 @@
 }
 
 .starred-list {
-    position: absolute;
     width: 100%;
     height: calc(50% - 10px);
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .material.starred {
