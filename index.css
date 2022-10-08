@@ -7,11 +7,15 @@
 }
 
 :root {
-    --background-main: rgb(26, 31, 37);
-    --background-light: rgb(54, 69, 87);
-    --border-color: rgba(105, 105, 105, 0.3);
-    --text-color: white;
-    --accent-main: rgb(255, 255, 255);
+    --background-main: rgb(0, 7, 19);
+    --background-light: rgb(0, 24, 54);
+    --border-color: rgba(0, 0, 0, 0.3);
+    --text-color: rgba(255, 255, 255, 1);
+    --font-color-h2: rgb(0, 150, 255);
+    --accent-main: rgb(0, 150, 255);
+
+    --background-main-ver1: rgb(0, 11, 26);
+    --background-light-ver1: rgb(30, 53, 82);
 }
 
 @font-face {
@@ -51,14 +55,14 @@
 }
 
 .logo-text {
-    color: var(--accent-main);
+    color: var(--font-color-h2);
 }
 
 .logo .logo-img {
     margin-right: 25px;
     height: 40px;
     width: 40px;
-    background-color: brown;
+    background-color: var(--accent-main);
 }
 
 .actions {
@@ -132,7 +136,7 @@
 }
 
 .trending-list .trending-header h6 {
-    color: var(--text-color);
+    color: var(--accent-main);
     font-size: 30px;
     text-align: center;
 }
@@ -161,9 +165,8 @@
 .material h2 {
     margin-top: 0px;
     font-size: 15px;
-    color: var(--text-color);
-    opacity: 65%;
-    margin-bottom: 50px;
+    color: var(--font-color-h2);
+    margin-bottom: 0px;
 }
 
 .material .user {
@@ -178,7 +181,7 @@
     width: 25px;
     height: 25px;
     margin-right: 10px;
-    background-color: brown;
+    background-color: var(--accent-main);
     border-radius: 5px;
 }
 
@@ -203,6 +206,7 @@
     width: calc(100% - 55px);
     margin: 10px;
     margin-bottom: 0px;
+    margin-top: 0px;
     padding: 20px;
     border-radius: 5px;
     display: flex;
@@ -211,17 +215,35 @@
 }
 
 .starred-header h1 {
-    color: var(--text-color);
+    color: var(--accent-main);
     text-align: center;
 }
 
 .starred-list {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+.starred-list-top {
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: row;
-    overflow-y: hidden;
+
 }
+
+.starred-list-bottom {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+
+}
+
 
 .material.starred {
     min-width: 350px;
@@ -233,6 +255,7 @@
     width: calc(100% - 55px);
     margin: 10px;
     margin-bottom: 0px;
+    margin-top: 0px;
     padding: 20px;
     border-radius: 5px;
     display: flex;
@@ -241,7 +264,7 @@
 }
 
 .recent-header h1 {
-    color: var(--text-color);
+    color: var(--accent-main);
     text-align: center;
 }
 
@@ -249,8 +272,24 @@
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     overflow-y: hidden;
+}
+
+.recent-list-top {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.recent-list-bottom {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+
 }
 
 .material.recent {
