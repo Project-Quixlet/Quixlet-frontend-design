@@ -215,7 +215,7 @@
     border: solid var(--border-color-light);
     margin-left: 15px;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .star-text {
@@ -283,7 +283,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     filter: invert(1);
-    transform: scaleX(-1);
+    transform: scale(-1, -1);
 }
 
 .next-button {
